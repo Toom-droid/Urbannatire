@@ -1,0 +1,47 @@
+.productos-main{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    width: 95%;
+    margin: 0 auto;
+    font-family: $fuente;
+    @include tablet{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include desktop{
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .remera,
+    .buzo{
+        position: relative;
+        width: 97.5%;
+        @include tablet{
+            width: 100%;
+        }
+    }
+    .titulo{
+        grid-column: 1 / 3 ;
+        @include tablet{
+            grid-column: 1 / 3;
+        }
+        @include desktop{
+            grid-column: 1 / 6 ;
+        }
+        display: flex;
+        justify-content: center;
+        background-image: url(../../../build/img/fondo.webp);
+        background-position: center center;
+        h1{
+            color: $blanco;
+            font-size: 5rem;
+        }
+    }
+}
+.productos-nav{
+    font-size: 1.8rem;
+    margin-bottom: 5rem;
+    background-color: $grisOscuro2;
+}
+.footer-productos{
+    margin-top: 5rem;
+}

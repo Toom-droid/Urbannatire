@@ -1,0 +1,223 @@
+.header{
+    background-image: url(../../../build/img/fondo.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 95vh;
+    width: 100%;
+    font-family: $fuente;
+    // padding-top: 98.22px;
+}
+
+
+.navegacion{
+    font-family: $fuente;
+    font-weight: 700;
+    transition: background-color .3s ease-in-out, height .2s ease-in-out;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    place-items: center;
+    height: 10rem;
+    @include tablet{
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+    }
+    .logo{
+        filter: brightness(200%);
+        img{
+            width: 30rem;
+            filter: invert(100%);
+        }
+    }
+    .logo-container{
+        grid-row: 1 / 2;    
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        .logo{
+            padding-right: 6rem;
+            @include tablet{
+                padding-right: 0rem;
+            }
+        }
+        @include tablet{
+            flex-direction: column;
+        }
+    }
+    .enlaces,
+    .adicionales{
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        visibility: hidden;
+        height: 0rem;
+        width: 0rem;
+        padding: 0rem;
+        @include tablet{
+            flex-direction: row;
+            padding: 1rem;
+            width: auto;
+            height: auto;
+            visibility: visible;
+            gap: .5rem;
+        }
+        a{
+            transition: none;
+            visibility: hidden;
+            height: 0rem;
+            width: 0rem;
+            padding: 0rem;
+            color: $blanco;
+            border: 1px solid rgba(255, 255, 255, 0);
+            border-radius: .5rem;
+            transition: .3s all;
+            @include tablet{
+                visibility: visible;
+                width: auto;
+                height: auto;
+                padding: 1rem;
+
+            }
+            &:hover{
+                border: 1px solid $blanco;
+                background-color: rgba(255, 255, 255, 0.301);
+                color: $blanco;
+            }
+        }
+    }
+}
+
+.fijamiento {
+    height: 8rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    background-color: $grisOscuro2;
+    transition: background-color .3s ease-in-out, height .2s ease-in-out;
+    box-shadow: 0px 2px 3px rgba(255, 255, 255, 0.021);
+    @include tablet{
+        height: auto;
+    }
+}
+
+.descripcion{
+    display: flex;
+    justify-content: space-between;
+    margin: 5rem 1rem;
+    &.menosMargin{
+        margin: 0rem 1rem;
+    }
+    @include tablet{
+        margin: 30rem 2rem;
+
+    }
+    .location{
+        display: flex;
+        justify-content: center;
+        img{
+            width: 2.9rem;
+        }
+    }
+}
+.redes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    .red{
+        img{
+            transition: all .2s;
+            width: 3.5rem;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+    .contact{
+        display: flex;
+        justify-content: center;
+        img{
+            width: 3rem;
+        }
+    }
+}
+
+#twitter{
+    &:hover{
+        filter: drop-shadow(0px 0px 8px #00b7ffa9);
+    }
+}
+#whatsapp{
+    &:hover{
+        filter: drop-shadow(0px 0px 8px #1BD741a9);
+    }
+}
+#facebook{
+    &:hover{
+        filter: drop-shadow(0px 0px 8px #4867AAa9);
+    }
+}
+#youtube{
+    &:hover{
+        filter: drop-shadow(0px 0px 8px #FE0000a9);
+    }
+}
+
+
+
+.boton-menu{
+    visibility: visible;
+    padding-right: 2rem;
+    padding-left: 1rem;
+    &:hover{
+        cursor: pointer;
+    }
+    img{
+        width: 4rem;
+    }
+    @include tablet{
+        visibility: hidden;
+        img{
+            width: 0rem;
+            height:0rem;
+        }
+    }
+}
+
+.navegacion .enlaces a.menu,
+.navegacion .enlaces.menu,
+.navegacion .adicionales a.menu,
+.navegacion .adicionales.menu{
+    font-family: $fuente;
+    font-weight: 900;
+    padding: 1.5rem;
+    width: 100%;
+    height: auto;
+    visibility: visible;
+    gap: 1rem;
+    text-align: center;
+    @include tablet{
+        visibility: visible;
+        width: auto;
+        height: auto;
+        padding: 1rem;
+    }
+}
+.navegacion .adicionales.menu{
+    margin-top: -2rem;
+}
+.moreHeight{
+    height: 40rem;
+    @include tablet{
+        height: 10rem;
+    }
+}
+
+.navegacion-productos{
+    margin-bottom: 5rem;
+}

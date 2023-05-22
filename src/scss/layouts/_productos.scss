@@ -1,0 +1,240 @@
+.productos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10rem;
+    width:100%;
+    margin: 15rem 0 3rem 0;
+    .portada{
+        height: 50vh;
+        width:100%;
+        background-image: url(../../../build/img/portada.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $blanco;
+        font-family: $fuente;
+        font-weight: 900;
+        font-size: 2.5rem;
+        @include tablet{
+            font-size: 3.5rem;
+        }
+        text-transform: uppercase;
+    }
+}
+
+// Buzos Hombres
+
+.buzosh{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    @include desktop{
+        flex-direction: row;
+    }
+    .buzos{
+        display: grid;
+        row-gap: 5rem;
+        column-gap: 2rem;
+        grid-template-columns: repeat(1, 1fr);
+        @include tablet{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include desktop{
+            row-gap: 10rem;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .buzo{
+            position: relative;
+            width: 35rem;
+        }
+        img{
+            width: 100%
+        }
+    }
+}
+.buzosh-portada{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../../build/img/buzohombre.webp);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 35rem;
+    height: 80rem;
+    @include tablet{
+        width: 72rem;
+    }
+    @include desktop{
+        width: 60rem;
+    }
+    h1{
+        color: $blanco;
+        font-family: $fuente;
+        text-align: center;
+        font-size: 5rem;
+        @include tablet{
+            font-size: 10rem;
+        }
+    }
+}
+
+// Buzos Mujeres
+.buzosm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 2rem;
+    @include desktop{
+        flex-direction: row;
+    }
+    .buzos{
+        display: grid;
+        row-gap: 10rem;
+        column-gap: 2rem;
+        grid-template-columns: repeat(1, 1fr);
+        @include tablet{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include desktop{
+            row-gap: 10rem;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .buzo{
+            position: relative;
+            width: 35rem;
+        }
+        img{
+            width: 100%
+        }
+    }
+}
+
+.buzosm-portada{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../../build/img/buzomujer.webp);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 35rem;
+    height: 85rem;
+    @include tablet{
+        width: 72rem;
+    }
+    @include desktop{
+        width: 60rem;
+    }
+    h1{
+        color: $blanco;
+        font-family: $fuente;
+        text-align: center;
+        font-size: 5rem;
+        @include tablet{
+            font-size: 10rem;
+        }
+    }
+}
+
+// Remeras Unisex
+.remeras-portada{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../../build/img/remerasu.webp);
+
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 35rem;
+    height: 80rem;
+    @include tablet{
+        height: 80.2rem;
+        width: 72rem;
+    }
+    @include desktop{
+        width: 60rem;
+    }
+    h1{
+        color: $blanco;
+        font-family: $fuente;
+        text-align: center;
+        font-size: 5rem;
+        @include tablet{
+            font-size: 10rem;
+        }
+    }
+}
+
+.remerasu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    @include desktop{
+        flex-direction: row;
+    }
+}
+.remeras{
+    display: grid;
+    row-gap: 10rem;
+    column-gap: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+    @include tablet{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include desktop{
+        row-gap: 10rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .remera{
+        position: relative;
+        width: 35rem;
+        img{
+            width: 100%
+        }
+    }
+}
+
+// Efectos
+.remera img:hover,
+.buzo img:hover{
+    filter: opacity(80%);
+    transition: all .5s;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.ver-text{
+    transition: opacity .5s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6rem;
+    font-family: $fuente;
+    font-weight: bolder;
+    color: $blanco;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+}
+.remera:hover .ver-text,
+.buzo:hover .ver-text{
+    opacity: 1;
+}

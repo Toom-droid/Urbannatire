@@ -1,0 +1,45 @@
+.nosotros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 4rem;
+    margin-top: 5rem;
+    @include tablet{
+        margin-top: 20rem;
+    }
+    @include desktop{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        place-items: center;
+    }
+    .nosotros-texto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        h1,p{
+            color: $blanco;
+            font-family: $fuente;
+        }
+        h1{
+            font-size: 3rem;
+            font-weight: bolder;
+            margin: 1rem 0;
+            border-bottom: 2px solid $blanco;
+            text-align: center;
+            @include tablet{
+                font-size: 4rem;
+
+            }
+        }
+        p{
+            font-weight: bold;
+        }
+        iframe{
+            width: 100%;
+        }    
+    }
+}

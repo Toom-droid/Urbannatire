@@ -1,0 +1,35 @@
+.datos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    padding: 1rem;
+    @include desktop{
+        display: flex;
+        flex-direction: row;
+        gap: 10rem;
+    }
+    margin-top: 12rem;
+    img{
+        width: 7rem;
+    }
+    .dato{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        h2,p{
+            color: $blanco;
+            font-family: $fuente;
+        }
+        h2{
+            font-size: 1.7rem;
+            margin: 2rem 0 0 0;
+            text-shadow: 1px 1px 1px $blanco;
+        }
+        p{
+            font-size: 1.5rem;
+        }
+    }
+}
